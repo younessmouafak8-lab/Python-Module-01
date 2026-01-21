@@ -1,8 +1,11 @@
 class Plant:
+    counter = 0
+
     def __init__(self, name, height, plant_age):
         self.name = name
         self.height = height
         self.plant_age = plant_age
+        Plant.counter += 1
 
     def get_info(self):
         print(f"{self.name} ({self.height}cm, {self.plant_age} days old)")
@@ -19,6 +22,7 @@ def main():
         current = Plant(name, height, age)
         print("Created: ", end="")
         current.get_info()
+    print("\nTotal plants created:", Plant.counter)
 
 
 if __name__ == "__main__":
