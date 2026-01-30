@@ -1,11 +1,17 @@
 class Plant:
-    def __init__(self, name, height, age):
+    """
+    The blueprint for generating Plants
+    """
+    def __init__(self, name: str, height: int, age: int) -> None:
+        """
+        setting the values of the object's attributes
+        """
         self.name = name
         self.height = height
         self.age = age
 
 
-def main():
+def main() -> None:
     plant1 = Plant("Rose", 25, 30)
     plant2 = Plant("Sunflower", 80, 45)
     plant3 = Plant("Cactus", 15, 120)
